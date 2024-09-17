@@ -31,3 +31,7 @@ DabAnimation(
 ### License
 
 This project is licensed under the BSD (3-Clause) License - see the LICENSE file for details.
+
+### Extra credits
+
+[Woo](https://github.com/brainwo), who didn't claim this package name on pub before me, ripperoni in pepperoni.
