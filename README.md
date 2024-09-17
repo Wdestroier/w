@@ -11,7 +11,7 @@ dependencies:
 ```
 2. Import the package:
 ```dart
-import 'package:w/dab_animation.dart';
+import 'package:w/w.dart';
 ```
 
 ### Usage
@@ -19,7 +19,7 @@ import 'package:w/dab_animation.dart';
 To use this package, simply wrap any widget with `DabAnimation`:
 
 ```dart
-import 'package:w/dab_animation.dart';
+import 'package:w/w.dart';
 
 DabAnimation(
   child: YourWidget(),
