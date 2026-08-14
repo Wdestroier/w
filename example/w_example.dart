@@ -1,13 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:w/w.dart';
 
 main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Dab Animation Example'),
-        ),
+        appBar: AppBar(title: const Text('Dab Animation Example')),
         body: Center(
           child: DabAnimation(
             child: Container(
@@ -17,10 +15,7 @@ main() {
               child: const Center(
                 child: Text(
                   'Dab!',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),
+                  style: TextStyle(color: Colors.white, fontSize: 24),
                 ),
               ),
             ),

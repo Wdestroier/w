@@ -7,7 +7,7 @@ w is a Flutter package that adds a fun dab animation to your widgets.
 1. Add the package to your `pubspec.yaml`:
 ```yaml
 dependencies:
-  w: ^1.0.0
+  w: ^1.1.0
 ```
 2. Import the package:
 ```dart

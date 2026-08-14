@@ -1,15 +1,7 @@
-library w;
+import 'package:flutter/widgets.dart';
 
-import 'package:flutter/material.dart';
-
-class DabAnimation extends StatefulWidget {
-  final Widget child;
-
-  const DabAnimation({
-    required this.child,
-    super.key,
-  });
-
+class const DabAnimation({required final Widget child, super.key})
+    extends StatefulWidget {
   @override
   createState() => _DabAnimationState();
 }
@@ -21,7 +13,7 @@ class _DabAnimationState extends State<DabAnimation>
   late Animation<Offset> _translationAnimation;
 
   @override
-   initState() {
+  initState() {
     super.initState();
 
     // Initialize the animation controller.
@@ -34,34 +26,20 @@ class _DabAnimationState extends State<DabAnimation>
     _rotationAnimation = Tween<double>(
       begin: 0.0,
       end: -0.5,
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Curves.easeInOut,
-      ),
-    );
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
 
     // Define the translation animation.
     _translationAnimation = Tween<Offset>(
       begin: Offset.zero,
       end: const Offset(0.2, -0.2),
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Curves.easeInOut,
-      ),
-    );
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
   }
 
   @override
   dispose() {
     _controller.dispose();
-    super.dispose();
-  }
 
-  _startDabAnimation() async {
-    await _controller.forward();
-    _controller.reverse();
+    super.dispose();
   }
 
   @override
@@ -82,5 +60,10 @@ class _DabAnimationState extends State<DabAnimation>
         child: widget.child,
       ),
     );
+  }
+
+  _startDabAnimation() async {
+    await _controller.forward();
+    _controller.reverse();
   }
 }
